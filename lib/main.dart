@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'providers/habit_provider.dart';
 import 'screens/home_screen.dart';
+import 'screens/habits_list_screen.dart';
+import 'screens/add_edit_habit_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => HabitProvider()..init(),
+      create: (_) => HabitProvider()..init()..addDemoHabits(),
       child: MaterialApp(
         title: 'HabitForge',
         theme: ThemeData(
@@ -24,6 +26,10 @@ class MyApp extends StatelessWidget {
         darkTheme: ThemeData.dark(useMaterial3: true),
         themeMode: ThemeMode.system,
         home: const HomeScreen(),
+        routes: {
+          '/list': (_) => const HabitsListScreen(),
+          '/add': (_) => const AddEditHabitScreen(),
+        },
         debugShowCheckedModeBanner: false,
       ),
     );
