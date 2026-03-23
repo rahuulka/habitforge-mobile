@@ -37,4 +37,4 @@ Download the release APK from the Releases tab (or run `flutter build apk --rele
 
 **This project fulfills all undergraduate requirements + bonus features (charts, AI, animations, responsive design).**
 
-MIT License © 2026 Rahul Kadam & Powell Wayne
+MIT License © 2026 Rahul Kadam & Powell Waynel
