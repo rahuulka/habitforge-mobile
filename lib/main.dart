@@ -29,6 +29,8 @@ class MyApp extends StatelessWidget {
         routes: {
           '/list': (_) => const HabitsListScreen(),
           '/add': (_) => const AddEditHabitScreen(),
+          '/detail': (context) => HabitDetailScreen(habit: ModalRoute.of(context)!.settings.arguments as Habit),
+          '/analytics': (_) => const AnalyticsScreen(),
         },
         debugShowCheckedModeBanner: false,
       ),

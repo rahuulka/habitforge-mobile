@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../providers/habit_provider.dart';
 import 'habits_list_screen.dart';
-import 'add_edit_habit_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
